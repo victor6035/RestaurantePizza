@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Pizzas pizzaMargarita= new Pizzas();
+      /*  Pizzas pizzaMargarita= new Pizzas();
 
 
         pizzaMargarita.setTipo(1);
@@ -48,6 +48,23 @@ public class Main {
         pizzasLaCasaXD.setPiña(true);
 
         String mostrarPizza3 = pizzasLaCasaXD.toString();
-        System.out.println(mostrarPizza3);
+        System.out.println(mostrarPizza3);*/
+
+        Pizzas base = new BuilderPizzas()
+                .setMasa("pan")
+                .setRelleno(true)
+                .setCebolla(true)
+                .setPiña(true)
+                .build();
+        Pizzas rellenita = new BuilderPizzas()
+                .setRelleno(true)
+                .setCebolla(true)
+                .setMasa("integral")
+                .setSalsa(true)
+                .setTipoSalsa("barbacoa")
+                .build();
+
+
+        System.out.println("las pizzas "+base+"\n Pizzas rellenita "+rellenita);
     }
 }
